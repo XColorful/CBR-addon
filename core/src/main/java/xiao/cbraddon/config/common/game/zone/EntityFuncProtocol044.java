@@ -19,6 +19,7 @@ public class EntityFuncProtocol044 {
     public static final String FIXED_SIMULATION = "fixedSimulation";
     public static final String ALLOW_ON_BORDER = "allowOnBorder";
     public static final String GLOBAL_SHRINK_RATIO = "globalShrinkRatio";
+    public static final String NEED_SHUFFLE = "needShuffle";
     public static final String RANDOM_RANGE = "randomRange";
     public static final String FIND_GROUND = "findGround";
     public static final String LIMIT_TO_BOTTOM = "limitToBottom";
@@ -40,6 +41,7 @@ public class EntityFuncProtocol044 {
 
             boolean allowOnBorder = tag.contains(ALLOW_ON_BORDER) ? tag.getBoolean(ALLOW_ON_BORDER) : false;
             double globalShrinkRatio = tag.contains(GLOBAL_SHRINK_RATIO) ? tag.getDouble(GLOBAL_SHRINK_RATIO) : 1;
+            boolean needShuffle = tag.contains(NEED_SHUFFLE) ? tag.getBoolean(NEED_SHUFFLE) : false;
 
             Vec3 randomRange = tag.contains(RANDOM_RANGE) ? StringUtils.parseVectorString(tag.getString(RANDOM_RANGE)) : Vec3.ZERO;
             boolean findGround = tag.contains(FIND_GROUND) ? tag.getBoolean(FIND_GROUND) : false;
@@ -50,7 +52,7 @@ public class EntityFuncProtocol044 {
             Vec3 relativeMovementRandomRange = tag.contains(RELATIVE_MOVEMENT_RANDOM_RANGE) ? StringUtils.parseVectorString(tag.getString(RELATIVE_MOVEMENT_RANDOM_RANGE)) : Vec3.ZERO;
 
             return new EntityFuncProtocol(distribution, lootFactor, fixedSimulation,
-                    allowOnBorder, globalShrinkRatio,
+                    allowOnBorder, globalShrinkRatio, needShuffle,
                     randomRange, findGround, limitToBottom, limitToTop, additionalOffset, ignoreOutside, relativeMovementRandomRange);
         } catch (Exception e) {
             CbrAddon.LOGGER.debug("EntityFuncProtocol044: Failed to parse by cbra:0.4.4 protocol from tag: {}", tag, e);

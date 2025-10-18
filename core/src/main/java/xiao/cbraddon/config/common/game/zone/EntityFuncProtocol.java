@@ -14,6 +14,7 @@ public class EntityFuncProtocol {
 
     public final boolean allowOnBorder;
     public final double globalShrinkRatio;
+    public final boolean needShuffle;
 
     public final Vec3 randomRange;
     public final boolean findGround;
@@ -24,7 +25,7 @@ public class EntityFuncProtocol {
     public final Vec3 relativeMovementRange;
 
     protected EntityFuncProtocol(IDistribution distribution, double lootFactor, int fixedSimulation,
-                                 boolean allowOnBorder, double globalShrinkRatio,
+                                 boolean allowOnBorder, double globalShrinkRatio, boolean needShuffle,
                                  Vec3 randomRange, boolean findGround, boolean limitToBottom, boolean limitToTop, Vec3 additionalOffset, boolean ignoreOutside, Vec3 relativeMovementRange) {
         this.distribution = distribution;
         this.lootFactor = lootFactor;
@@ -32,6 +33,7 @@ public class EntityFuncProtocol {
 
         this.allowOnBorder = allowOnBorder;
         this.globalShrinkRatio = globalShrinkRatio;
+        this.needShuffle = needShuffle;
 
         this.randomRange = randomRange;
         this.findGround = findGround;

@@ -20,6 +20,7 @@ import xiao.cbraddon.config.common.game.zone.EntityFuncProtocol;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
@@ -76,6 +77,10 @@ public class EntityFuncHandler implements ICustomEventHandler {
                     minSimulation,
                     entityFuncProtocol.allowOnBorder,
                     entityFuncProtocol.globalShrinkRatio);
+            // 打乱点位
+            if (entityFuncProtocol.needShuffle) {
+                Collections.shuffle(pendingPos, CbrAddon.COMMON_RANDOM);
+            }
 
             // 随机偏移
             if (entityFuncProtocol.randomRange != Vec3.ZERO) {
