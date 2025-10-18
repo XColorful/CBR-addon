@@ -13,7 +13,6 @@ import xiao.battleroyale.api.event.ICustomEventHandler;
 import xiao.battleroyale.api.game.IGameManager;
 import xiao.battleroyale.api.game.zone.gamezone.IGameZone;
 import xiao.battleroyale.common.game.zone.ZoneManager;
-import xiao.battleroyale.util.ChatUtils;
 import xiao.battleroyale.util.Vec3Utils;
 import xiao.cbraddon.CbrAddon;
 import xiao.cbraddon.config.common.game.zone.EntityFuncProtocol;
@@ -133,6 +132,11 @@ public class EntityFuncHandler implements ICustomEventHandler {
                 }
             }
             int pendingSize = pendingPos.size();
+            if (pendingSize == 0) {
+                CbrAddon.LOGGER.warn("EntityFuncHandler: pendingSize == 0, add Vec3.ZERO");
+                pendingPos.add(Vec3.ZERO);
+                pendingSize = 1;
+            }
 
             // 逐个写入NBT并应用偏移
             boolean doRelativeMovement = entityFuncProtocol.relativeMovementRange != Vec3.ZERO;
