@@ -1,0 +1,23 @@
+package xiao.cbraddon.event;
+
+import xiao.battleroyale.api.event.CustomEventType;
+import xiao.battleroyale.api.event.EventPriority;
+import xiao.battleroyale.api.event.ICustomEventHandler;
+import xiao.battleroyale.api.event.ICustomEventRegister;
+import xiao.cbraddon.CbrAddon;
+import xiao.cbraddon.event.game.EntityFuncHandler;
+
+public class CustomEventHandler {
+
+    public static void registerAll(ICustomEventRegister customEventRegister) {
+        register(customEventRegister, EntityFuncHandler.get(), CustomEventType.ENTITY_EVENT, EventPriority.NORMAL, false);
+    }
+
+    private static void register(ICustomEventRegister customEventRegister, ICustomEventHandler eventHandler, CustomEventType customEventType, EventPriority priority, boolean receiveCanceled) {
+        if (customEventRegister.register(eventHandler, customEventType, priority, receiveCanceled)) {
+            CbrAddon.LOGGER.debug("{} registered to {}", eventHandler.getEventHandlerName(), customEventType);
+        } else {
+            CbrAddon.LOGGER.debug("Failed to register {} to {}", eventHandler.getEventHandlerName(), customEventType);
+        }
+    }
+}

@@ -1,0 +1,81 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: mapping_channel, version: mapping_version
+    copyIdeResources = true
+    runs {
+        configureEach {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                "${mod_id}" {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        client {
+            property 'forge.enabledGameTestNamespaces', mod_id
+        }
+        server {
+            property 'forge.enabledGameTestNamespaces', mod_id
+            args '--nogui'
+        }
+        gameTestServer {
+            property 'forge.enabledGameTestNamespaces', mod_id
+        }
+        data {
+            workingDirectory project.file('run-data')
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+        }
+    }
+}
+
+tasks.withType(ProcessResources).configureEach {
+    from(project(':core').sourceSets.main.resources)
+
+    var replaceProperties = [
+            mod_license: project.mod_license,
+            mod_version: project.mod_version
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [
+                loader_version_range: forge_version_range,
+                target_modloader: 'forge',
+                target_version_range: forge_version_range,
+                minecraft_version_range: minecraft_version_range,
+                project: project
+        ]
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${forge_version}"
+
+    implementation project(":core")
+
+    compileOnly fg.deobf("curse.maven:custom-battleroyale-1277855:7117680")
+}
+
+tasks.named('jar', Jar).configure {
+    archiveBaseName.set("cbr-addon")
+    archiveVersion.set(mod_version)
+    archiveClassifier.set("forge1.20.1")
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from project(':core').sourceSets.main.output
+}
+
+tasks.matching { it.name == 'remapJar' || it.name == 'reobfJar' }.configureEach {
+    if (it.hasProperty("archiveClassifier")) {
+        it.archiveBaseName.set("cbr-addon")
+        it.archiveVersion.set(mod_version)
+        it.archiveClassifier.set("forge1.20.1")
+    }
+}

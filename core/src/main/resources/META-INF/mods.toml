@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://github.com/XColorful/CBR-addon/issues"
+
+[[mods]]
+modId="cbraddon"
+version="${mod_version}"
+displayName="Custom BattleRoyale Addon"
+displayURL="https://github.com/XColorful/CBR-addon/wiki"
+logoFile="logo.png"
+authors="XiaoColorful"
+description='''
+'''
+
+[[dependencies.cbraddon]]
+modId="${target_modloader}"
+mandatory=true
+versionRange="${target_version_range}"
+ordering="NONE"
+side="BOTH"
+[[dependencies.cbraddon]]
+modId="minecraft"
+mandatory=true
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
+[[dependencies.cbraddon]]
+modId = "battleroyale"
+mandatory = true
+versionRange = "[0.4.4-dev1,)"
+ordering = "NONE"
+side = "SERVER"
