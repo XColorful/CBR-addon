@@ -9,15 +9,17 @@ import xiao.battleroyale.api.algorithm.IDistribution;
 public class EntityFuncProtocol {
 
     public final IDistribution distribution;
+    public final double lootFactor;
+    public final int fixedSimulation;
+
     public final boolean allowOnBorder;
     public final double globalShrinkRatio;
+
     public final Vec3 randomRange;
     public final boolean findGround;
     public final boolean limitToBottom;
     public final boolean limitToTop;
     public final Vec3 additionalOffset;
-    public final double lootFactor;
-    public final int fixedSimulation;
     public final boolean ignoreOutside;
     public final Vec3 relativeMovementRange;
 
