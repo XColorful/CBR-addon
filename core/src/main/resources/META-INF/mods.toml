@@ -10,7 +10,7 @@ displayName="Custom BattleRoyale Addon"
 displayURL="https://github.com/XColorful/CBR-addon/wiki"
 logoFile="logo.png"
 authors="XiaoColorful"
-description='''
+description='''Custom BattleRoyale author's CBR API usage reference mod
 '''
 
 [[dependencies.cbraddon]]
