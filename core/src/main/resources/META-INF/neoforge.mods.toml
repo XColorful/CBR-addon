@@ -28,6 +28,6 @@ side="BOTH"
 [[dependencies.cbraddon]]
 modId = "battleroyale"
 type="required"
-versionRange = "[0.4.4-dev1,)"
+versionRange = "[0.4.4-dev2,)"
 ordering = "NONE"
 side = "SERVER"
