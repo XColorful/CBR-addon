@@ -144,7 +144,7 @@ public class EntityFuncHandler implements ICustomEventHandler {
                 Entity entity = lootEntities.get(i);
 
                 // 写入NBT
-                CompoundTag entityNbt = entity.serializeNBT();
+                CompoundTag entityNbt = entity.serializeNBT(zoneTickContext.serverLevel.registryAccess());
                 CompoundTag nbt = entityEvent.getNbt().copy(); // 只读
                 for (String key : nbt.getAllKeys()) {
                     entityNbt.put(key, Objects.requireNonNull(nbt.get(key)));
