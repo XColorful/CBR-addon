@@ -68,13 +68,13 @@ dependencies {
 
     implementation project(":core")
 
-    compileOnly "curse.maven:custom-battleroyale-1277855:7125637"
+    compileOnly "curse.maven:custom-battleroyale-1277855:7125661"
 }
 
 tasks.named('jar', Jar).configure {
     archiveBaseName.set("cbr-addon")
     archiveVersion.set(mod_version)
-    archiveClassifier.set("neoforge1.21.6")
+    archiveClassifier.set("neoforge1.21.10")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from project(':core').sourceSets.main.output
 }
