@@ -36,7 +36,7 @@ runs {
         systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
     }
 
-    data {
+    clientData {
         arguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
     }
 }
@@ -68,13 +68,13 @@ dependencies {
 
     implementation project(":core")
 
-    compileOnly "curse.maven:custom-battleroyale-1277855:7124628"
+    compileOnly "curse.maven:custom-battleroyale-1277855:7125624"
 }
 
 tasks.named('jar', Jar).configure {
     archiveBaseName.set("cbr-addon")
     archiveVersion.set(mod_version)
-    archiveClassifier.set("neoforge1.21.1")
+    archiveClassifier.set("neoforge1.21.4")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from project(':core').sourceSets.main.output
 }
