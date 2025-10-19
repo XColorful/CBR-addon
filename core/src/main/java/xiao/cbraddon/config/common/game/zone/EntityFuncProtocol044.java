@@ -30,26 +30,26 @@ public class EntityFuncProtocol044 {
 
     protected static EntityFuncProtocol fromTag(@NotNull CompoundTag tag) {
         try {
-            IDistribution distribution = switch (tag.contains(DISTRIBUTION_TYPE) ? tag.getString(DISTRIBUTION_TYPE) : "") {
+            IDistribution distribution = switch (tag.contains(DISTRIBUTION_TYPE) ? tag.getString(DISTRIBUTION_TYPE).get() : "") {
                 case "rectangleGrid" -> algorithmApi.rectangleGrid();
                 case "goldenSpiral" -> algorithmApi.golderSpiral();
                 case "circleGrid" -> algorithmApi.circleGrid();
                 default -> algorithmApi.circleGrid();
             };
-            double lootFactor = tag.contains(LOOT_FACTOR_CONTRIBUTION) ? tag.getDouble(LOOT_FACTOR_CONTRIBUTION) : 1;
-            int fixedSimulation = tag.contains(FIXED_SIMULATION) ? tag.getInt(FIXED_SIMULATION) : 0;
+            double lootFactor = tag.contains(LOOT_FACTOR_CONTRIBUTION) ? tag.getDouble(LOOT_FACTOR_CONTRIBUTION).get() : 1;
+            int fixedSimulation = tag.contains(FIXED_SIMULATION) ? tag.getInt(FIXED_SIMULATION).get() : 0;
 
-            boolean allowOnBorder = tag.contains(ALLOW_ON_BORDER) ? tag.getBoolean(ALLOW_ON_BORDER) : false;
-            double globalShrinkRatio = tag.contains(GLOBAL_SHRINK_RATIO) ? tag.getDouble(GLOBAL_SHRINK_RATIO) : 1;
-            boolean needShuffle = tag.contains(NEED_SHUFFLE) ? tag.getBoolean(NEED_SHUFFLE) : false;
+            boolean allowOnBorder = tag.contains(ALLOW_ON_BORDER) ? tag.getBoolean(ALLOW_ON_BORDER).get() : false;
+            double globalShrinkRatio = tag.contains(GLOBAL_SHRINK_RATIO) ? tag.getDouble(GLOBAL_SHRINK_RATIO).get() : 1;
+            boolean needShuffle = tag.contains(NEED_SHUFFLE) ? tag.getBoolean(NEED_SHUFFLE).get() : false;
 
-            Vec3 randomRange = tag.contains(RANDOM_RANGE) ? StringUtils.parseVectorString(tag.getString(RANDOM_RANGE)) : Vec3.ZERO;
-            boolean findGround = tag.contains(FIND_GROUND) ? tag.getBoolean(FIND_GROUND) : false;
-            boolean limitToBottom = tag.contains(LIMIT_TO_BOTTOM) ? tag.getBoolean(LIMIT_TO_BOTTOM) : true;
-            boolean limitToTop = tag.contains(LIMIT_TO_TOP) ? tag.getBoolean(LIMIT_TO_TOP) : false;
-            Vec3 additionalOffset = tag.contains(ADDITIONAL_OFFSET) ? StringUtils.parseVectorString(tag.getString(ADDITIONAL_OFFSET)) : Vec3.ZERO;
-            boolean ignoreOutside = tag.contains(IGNORE_OUTSIDE) ? tag.getBoolean(IGNORE_OUTSIDE) : false;
-            Vec3 relativeMovementRandomRange = tag.contains(RELATIVE_MOVEMENT_RANDOM_RANGE) ? StringUtils.parseVectorString(tag.getString(RELATIVE_MOVEMENT_RANDOM_RANGE)) : Vec3.ZERO;
+            Vec3 randomRange = tag.contains(RANDOM_RANGE) ? StringUtils.parseVectorString(tag.getString(RANDOM_RANGE).get()) : Vec3.ZERO;
+            boolean findGround = tag.contains(FIND_GROUND) ? tag.getBoolean(FIND_GROUND).get() : false;
+            boolean limitToBottom = tag.contains(LIMIT_TO_BOTTOM) ? tag.getBoolean(LIMIT_TO_BOTTOM).get() : true;
+            boolean limitToTop = tag.contains(LIMIT_TO_TOP) ? tag.getBoolean(LIMIT_TO_TOP).get() : false;
+            Vec3 additionalOffset = tag.contains(ADDITIONAL_OFFSET) ? StringUtils.parseVectorString(tag.getString(ADDITIONAL_OFFSET).get()) : Vec3.ZERO;
+            boolean ignoreOutside = tag.contains(IGNORE_OUTSIDE) ? tag.getBoolean(IGNORE_OUTSIDE).get() : false;
+            Vec3 relativeMovementRandomRange = tag.contains(RELATIVE_MOVEMENT_RANDOM_RANGE) ? StringUtils.parseVectorString(tag.getString(RELATIVE_MOVEMENT_RANDOM_RANGE).get()) : Vec3.ZERO;
 
             return new EntityFuncProtocol(distribution, lootFactor, fixedSimulation,
                     allowOnBorder, globalShrinkRatio, needShuffle,

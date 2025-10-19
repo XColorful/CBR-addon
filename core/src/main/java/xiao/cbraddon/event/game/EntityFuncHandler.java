@@ -1,11 +1,18 @@
 package xiao.cbraddon.event.game;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.ProblemReporter;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.storage.TagValueInput;
+import net.minecraft.world.level.storage.TagValueOutput;
+import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.phys.Vec3;
+import xiao.battleroyale.BattleRoyale;
 import xiao.battleroyale.api.event.game.zone.EntityEvent;
 import xiao.battleroyale.api.event.CustomEventType;
 import xiao.battleroyale.api.event.ICustomEvent;
@@ -21,7 +28,6 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 
 public class EntityFuncHandler implements ICustomEventHandler {
 
@@ -144,15 +150,34 @@ public class EntityFuncHandler implements ICustomEventHandler {
                 Entity entity = lootEntities.get(i);
 
                 // 写入NBT
-                CompoundTag entityNbt = new CompoundTag();
-                if (entity.save(entityNbt)) {
-                    CompoundTag nbt = entityEvent.getNbt().copy(); // 只读
-                    for (String key : nbt.getAllKeys()) {
-                        entityNbt.put(key, Objects.requireNonNull(nbt.get(key)));
+                try {
+                    TagValueOutput output = TagValueOutput.createWithContext(ProblemReporter.DISCARDING, zoneTickContext.serverLevel.registryAccess());
+                    if (entity.save(output)) {
+                        CompoundTag nbt = entityEvent.getNbt().copy(); // 只读
+                        for (String key : nbt.keySet()) {
+                            Tag tag = nbt.get(key);
+                            switch (tag.getId()) {
+                                case Tag.TAG_BYTE -> output.putByte(key, tag.asByte().get());
+                                case Tag.TAG_SHORT -> output.putShort(key, tag.asShort().get());
+                                case Tag.TAG_INT -> output.putInt(key, tag.asInt().get());
+                                case Tag.TAG_LONG -> output.putLong(key, tag.asLong().get());
+                                case Tag.TAG_FLOAT -> output.putFloat(key, tag.asFloat().get());
+                                case Tag.TAG_DOUBLE -> output.putDouble(key, tag.asDouble().get());
+                                case Tag.TAG_STRING -> output.putString(key, tag.asString().get());
+                                case Tag.TAG_LIST, Tag.TAG_INT_ARRAY, Tag.TAG_LONG_ARRAY -> output.putIntArray(key, tag.asIntArray().orElse(new int[0]));
+                                default -> {
+                                    CbrAddon.LOGGER.info("EntityFuncHandler: nbt.get({}).getId() = {} unhandled", key, tag.getId());
+                                }
+                            }
+                        }
+                        CompoundTag entityNbt = output.buildResult();
+                        ValueInput input = TagValueInput.create(ProblemReporter.DISCARDING, zoneTickContext.serverLevel.registryAccess(), entityNbt);
+                        entity.load(input);
+                    } else {
+                        CbrAddon.LOGGER.debug("EntityFuncHandler: entity.save() return false");
                     }
-                    entity.load(entityNbt);
-                } else {
-                    CbrAddon.LOGGER.debug("EntityFuncHandler: entity.save() return false");
+                } catch (Exception e) {
+                    CbrAddon.LOGGER.error("EntityFuncHandler: An error occurred during writing nbt to entity: {}", e.getMessage());
                 }
 
                 entity.setPos(zoneCenter.add(pendingPos.get(i % pendingSize)));
