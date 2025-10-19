@@ -70,7 +70,7 @@ dependencies {
 tasks.named('jar', Jar).configure {
     archiveBaseName.set("cbr-addon")
     archiveVersion.set(mod_version)
-    archiveClassifier.set("neoforge1.20.2")
+    archiveClassifier.set("neoforge1.20.x")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from project(':core').sourceSets.main.output
 }
