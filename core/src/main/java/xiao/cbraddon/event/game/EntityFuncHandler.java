@@ -99,7 +99,7 @@ public class EntityFuncHandler implements ICustomEventHandler {
                     int groundY = serverLevel.getHeight(Heightmap.Types.MOTION_BLOCKING, lookupPos.getX(), lookupPos.getZ());
                     double targetY = groundY + 1;
                     // 下限
-                    if (targetY < serverLevel.getMinBuildHeight() + 2) {
+                    if (targetY < serverLevel.dimensionType().minY() + 2) {
                         CbrAddon.LOGGER.debug("EntityFuncHandler attempt to use invalid targetY {}", targetY);
                     }
                     if (targetY < zoneBottomHeight && entityFuncProtocol.limitToBottom) {
@@ -144,12 +144,16 @@ public class EntityFuncHandler implements ICustomEventHandler {
                 Entity entity = lootEntities.get(i);
 
                 // 写入NBT
-                CompoundTag entityNbt = entity.serializeNBT(zoneTickContext.serverLevel.registryAccess());
-                CompoundTag nbt = entityEvent.getNbt().copy(); // 只读
-                for (String key : nbt.getAllKeys()) {
-                    entityNbt.put(key, Objects.requireNonNull(nbt.get(key)));
+                CompoundTag entityNbt = new CompoundTag();
+                if (entity.save(entityNbt)) {
+                    CompoundTag nbt = entityEvent.getNbt().copy(); // 只读
+                    for (String key : nbt.getAllKeys()) {
+                        entityNbt.put(key, Objects.requireNonNull(nbt.get(key)));
+                    }
+                    entity.load(entityNbt);
+                } else {
+                    CbrAddon.LOGGER.debug("EntityFuncHandler: entity.save() return false");
                 }
-                entity.load(entityNbt);
 
                 entity.setPos(zoneCenter.add(pendingPos.get(i % pendingSize)));
                 if (doRelativeMovement) {
