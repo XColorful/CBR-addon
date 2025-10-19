@@ -67,7 +67,7 @@ dependencies {
 tasks.named('jar', Jar).configure {
     archiveBaseName.set("cbr-addon")
     archiveVersion.set(mod_version)
-    archiveClassifier.set("forge1.20.1")
+    archiveClassifier.set("forge1.20.x")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from project(':core').sourceSets.main.output
 }
@@ -76,6 +76,6 @@ tasks.matching { it.name == 'remapJar' || it.name == 'reobfJar' }.configureEach 
     if (it.hasProperty("archiveClassifier")) {
         it.archiveBaseName.set("cbr-addon")
         it.archiveVersion.set(mod_version)
-        it.archiveClassifier.set("forge1.20.1")
+        it.archiveClassifier.set("forge1.20.x")
     }
 }
