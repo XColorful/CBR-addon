@@ -15,19 +15,19 @@ description='''Custom BattleRoyale author's CBR API usage reference mod
 
 [[dependencies.cbraddon]]
 modId="${target_modloader}"
-mandatory=true
+type="required"
 versionRange="${target_version_range}"
 ordering="NONE"
 side="BOTH"
 [[dependencies.cbraddon]]
 modId="minecraft"
-mandatory=true
+type="required"
 versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
 [[dependencies.cbraddon]]
 modId = "battleroyale"
-mandatory = true
+type="required"
 versionRange = "[0.4.4-dev1,)"
 ordering = "NONE"
 side = "SERVER"
