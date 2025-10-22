@@ -151,7 +151,7 @@ public class EntityFuncHandler implements ICustomEventHandler {
                 }
                 entity.load(entityNbt);
 
-                entity.setPos(zoneCenter.add(pendingPos.get(i % pendingSize)));
+                entity.setPos(pendingPos.get(i % pendingSize));
                 if (doRelativeMovement) {
                     Vec3 baseMovement = entity.getDeltaMovement();
                     entity.setDeltaMovement(Vec3Utils.randomAdjustXYZ(baseMovement, entityFuncProtocol.relativeMovementRange, zoneTickContext.random));
