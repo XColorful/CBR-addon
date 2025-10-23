@@ -1,5 +1,6 @@
 package xiao.cbraddon.config.common.game.zone;
 
+import com.google.gson.JsonObject;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
@@ -44,10 +45,10 @@ public class EntityFuncProtocol {
         this.relativeMovementRange = relativeMovementRange != null ? relativeMovementRange : Vec3.ZERO;
     }
 
-    public static @Nullable EntityFuncProtocol getConfigFromProtocol(String protocol, @NotNull CompoundTag tag) {
+    public static @Nullable EntityFuncProtocol getConfigFromProtocol(String protocol, @NotNull JsonObject jsonTag) {
         // 目前只有为cbra:0.4.4
         if (protocol.equals("cbra:0.4.4")) {
-            return EntityFuncProtocol044.fromTag(tag);
+            return EntityFuncProtocol044.fromTag(jsonTag);
         }
 
         return null;

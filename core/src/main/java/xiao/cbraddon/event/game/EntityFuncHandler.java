@@ -45,7 +45,7 @@ public class EntityFuncHandler implements ICustomEventHandler {
         if (customEventType == CustomEventType.ENTITY_EVENT) {
             // 检查协议是否指向该模组
             EntityEvent entityEvent = (EntityEvent) customEvent;
-            EntityFuncProtocol entityFuncProtocol = EntityFuncProtocol.getConfigFromProtocol(entityEvent.getProtocol(), entityEvent.getTag());
+            EntityFuncProtocol entityFuncProtocol = EntityFuncProtocol.getConfigFromProtocol(entityEvent.getProtocol(), entityEvent.getJsonTag());
             if (entityFuncProtocol == null) {
                 return;
             }
