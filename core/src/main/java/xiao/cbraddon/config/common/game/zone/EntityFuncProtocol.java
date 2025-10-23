@@ -16,13 +16,13 @@ public class EntityFuncProtocol {
     public final double globalShrinkRatio;
     public final boolean needShuffle;
 
-    public final Vec3 randomRange;
+    public final @NotNull Vec3 randomRange;
     public final boolean findGround;
     public final boolean limitToBottom;
     public final boolean limitToTop;
-    public final Vec3 additionalOffset;
+    public final @NotNull Vec3 additionalOffset;
     public final boolean ignoreOutside;
-    public final Vec3 relativeMovementRange;
+    public final @NotNull Vec3 relativeMovementRange;
 
     protected EntityFuncProtocol(IDistribution distribution, double lootFactor, int fixedSimulation,
                                  boolean allowOnBorder, double globalShrinkRatio, boolean needShuffle,
@@ -35,13 +35,13 @@ public class EntityFuncProtocol {
         this.globalShrinkRatio = globalShrinkRatio;
         this.needShuffle = needShuffle;
 
-        this.randomRange = randomRange;
+        this.randomRange = randomRange != null ? randomRange : Vec3.ZERO;
         this.findGround = findGround;
         this.limitToBottom = limitToBottom;
         this.limitToTop = limitToTop;
-        this.additionalOffset = additionalOffset;
+        this.additionalOffset = additionalOffset != null ? additionalOffset : Vec3.ZERO;
         this.ignoreOutside = ignoreOutside;
-        this.relativeMovementRange = relativeMovementRange;
+        this.relativeMovementRange = relativeMovementRange != null ? relativeMovementRange : Vec3.ZERO;
     }
 
     public static @Nullable EntityFuncProtocol getConfigFromProtocol(String protocol, @NotNull CompoundTag tag) {
