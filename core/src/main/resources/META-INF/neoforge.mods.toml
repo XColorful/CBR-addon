@@ -10,7 +10,7 @@ displayName="Custom BattleRoyale Addon"
 displayURL="https://github.com/XColorful/CBR-addon/wiki"
 logoFile="logo.png"
 authors="XiaoColorful"
-description='''Custom BattleRoyale author's CBR API usage reference mod
+description='''Custom BattleRoyale Feature Expansion
 '''
 
 [[dependencies.cbraddon]]
@@ -28,6 +28,6 @@ side="BOTH"
 [[dependencies.cbraddon]]
 modId = "battleroyale"
 type="required"
-versionRange = "[0.4.4-dev2,)"
+versionRange = "[0.4.4-dev3,)"
 ordering = "NONE"
 side = "SERVER"
