@@ -51,7 +51,7 @@ public class EntityFuncHandler implements ICustomEventHandler {
         if (customEventType == CustomEventType.ENTITY_EVENT) {
             // 检查协议是否指向该模组
             EntityEvent entityEvent = (EntityEvent) customEvent;
-            EntityFuncProtocol entityFuncProtocol = EntityFuncProtocol.getConfigFromProtocol(entityEvent.getProtocol(), entityEvent.getTag());
+            EntityFuncProtocol entityFuncProtocol = EntityFuncProtocol.getConfigFromProtocol(entityEvent.getProtocol(), entityEvent.getJsonTag());
             if (entityFuncProtocol == null) {
                 return;
             }
@@ -180,7 +180,7 @@ public class EntityFuncHandler implements ICustomEventHandler {
                     CbrAddon.LOGGER.error("EntityFuncHandler: An error occurred during writing nbt to entity: {}", e.getMessage());
                 }
 
-                entity.setPos(zoneCenter.add(pendingPos.get(i % pendingSize)));
+                entity.setPos(pendingPos.get(i % pendingSize));
                 if (doRelativeMovement) {
                     Vec3 baseMovement = entity.getDeltaMovement();
                     entity.setDeltaMovement(Vec3Utils.randomAdjustXYZ(baseMovement, entityFuncProtocol.relativeMovementRange, zoneTickContext.random));
