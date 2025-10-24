@@ -8,7 +8,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    compileOnly "curse.maven:custom-battleroyale-1277855:7125661"
+    compileOnly "curse.maven:custom-battleroyale-1277855:7144309"
 }
 
 jar {
