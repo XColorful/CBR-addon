@@ -68,7 +68,7 @@ dependencies {
 
     implementation project(":core")
 
-    compileOnly "curse.maven:custom-battleroyale-1277855:7125624"
+    compileOnly "curse.maven:custom-battleroyale-1277855:7143245"
 }
 
 tasks.named('jar', Jar).configure {
