@@ -67,7 +67,7 @@ dependencies {
 
     implementation project(":core")
 
-    compileOnly fg.deobf("curse.maven:custom-battleroyale-1277855:7142848")
+    compileOnly fg.deobf("curse.maven:custom-battleroyale-1277855:7142979")
 }
 
 tasks.named('jar', Jar).configure {
