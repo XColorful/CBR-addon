@@ -1,4 +1,4 @@
-package xiao.cbraddon.event.game;
+package xiao.cbraddon.event.custom.game;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -6,16 +6,16 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.Vec3;
-import xiao.battleroyale.api.event.game.zone.EntityEvent;
 import xiao.battleroyale.api.event.CustomEventType;
 import xiao.battleroyale.api.event.ICustomEvent;
 import xiao.battleroyale.api.event.ICustomEventHandler;
+import xiao.battleroyale.api.event.game.zone.EntityEvent;
 import xiao.battleroyale.api.game.IGameManager;
 import xiao.battleroyale.api.game.zone.gamezone.IGameZone;
 import xiao.battleroyale.common.game.zone.ZoneManager;
 import xiao.battleroyale.util.Vec3Utils;
 import xiao.cbraddon.CbrAddon;
-import xiao.cbraddon.config.common.game.zone.EntityFuncProtocol;
+import xiao.cbraddon.config.common.game.zone.zonefunc.custom.EntityFuncProtocol;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class EntityFuncHandler implements ICustomEventHandler {
 
     @Override
     public String getEventHandlerName() {
-        return "cbra:EntityFuncHandler";
+        return String.format("%s:EntityFuncHandler", CbrAddon.MOD_ID);
     }
 
     @Override
