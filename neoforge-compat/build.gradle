@@ -3,7 +3,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.192'
+    id 'net.neoforged.gradle.userdev' version '7.1.11'
 }
 
 version = mod_version
@@ -68,13 +68,13 @@ dependencies {
 
     implementation project(":core")
 
-    compileOnly "curse.maven:custom-battleroyale-1277855:7144309"
+    compileOnly "curse.maven:custom-battleroyale-1277855:7328646"
 }
 
 tasks.named('jar', Jar).configure {
     archiveBaseName.set("cbr-addon")
     archiveVersion.set(mod_version)
-    archiveClassifier.set("neoforge1.21.10")
+    archiveClassifier.set("neoforge1.21.11")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from project(':core').sourceSets.main.output
 }
