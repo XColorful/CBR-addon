@@ -1,11 +1,11 @@
-package xiao.cbraddon.event;
+package xiao.cbraddon.event.custom;
 
 import xiao.battleroyale.api.event.CustomEventType;
 import xiao.battleroyale.api.event.EventPriority;
 import xiao.battleroyale.api.event.ICustomEventHandler;
 import xiao.battleroyale.api.event.ICustomEventRegister;
 import xiao.cbraddon.CbrAddon;
-import xiao.cbraddon.event.game.EntityFuncHandler;
+import xiao.cbraddon.event.custom.game.EntityFuncHandler;
 
 public class CustomEventHandler {
 
