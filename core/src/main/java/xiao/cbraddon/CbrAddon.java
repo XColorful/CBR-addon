@@ -4,7 +4,7 @@ import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
 import xiao.battleroyale.BattleRoyale;
 import xiao.battleroyale.api.common.McSide;
-import xiao.cbraddon.event.CustomEventHandler;
+import xiao.cbraddon.event.custom.CustomEventHandler;
 
 import java.util.Random;
 
