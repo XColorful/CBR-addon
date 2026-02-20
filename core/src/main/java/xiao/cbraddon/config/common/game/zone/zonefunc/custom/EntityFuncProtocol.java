@@ -1,11 +1,14 @@
-package xiao.cbraddon.config.common.game.zone;
+package xiao.cbraddon.config.common.game.zone.zonefunc.custom;
 
 import com.google.gson.JsonObject;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import xiao.battleroyale.api.algorithm.IDistribution;
+import xiao.cbraddon.CbrAddon;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class EntityFuncProtocol {
 
@@ -46,11 +49,31 @@ public class EntityFuncProtocol {
     }
 
     public static @Nullable EntityFuncProtocol getConfigFromProtocol(String protocol, @NotNull JsonObject jsonTag) {
-        // 目前只有为cbra:0.4.4
-        if (protocol.equals("cbra:0.4.4")) {
-            return EntityFuncProtocol044.fromTag(jsonTag);
+        if (protocol == null || protocol.isEmpty()) {
+            return null;
         }
-
+        String[] parts = protocol.split(":", 2);
+        if (parts.length != 2) {
+            return null;
+        }
+        String namespace = parts[0];
+        String version = parts[1];
+        if (namespace.equals(CbrAddon.MOD_ID) || namespace.equals(CbrAddon.MOD_NAME_SHORT)) {
+            switch (version) {
+                case "0.4.4" -> {
+                    return EntityFuncProtocol044.fromTag(jsonTag);
+                }
+                default -> {
+                    if (!unknownVersion.contains(version)) {
+                        CbrAddon.LOGGER.info("EntityFuncProtocol: unknown version {}", version);
+                        unknownVersion.add(version);
+                    }
+                    return EntityFuncProtocol044.fromTag(jsonTag);
+                }
+            }
+        }
         return null;
     }
+
+    private static final Set<String> unknownVersion = new HashSet<>();
 }
