@@ -46,7 +46,7 @@ tasks.withType(ProcessResources).configureEach {
 
     var replaceProperties = [
             minecraft_version_range: minecraft_version_range,
-            loader_version_range   : forge_version_range,
+            loader_version_range   : neo_loader_version_range,
             mod_id                 : mod_id,
             mod_name               : mod_name,
             mod_license            : mod_license,
@@ -60,8 +60,8 @@ tasks.withType(ProcessResources).configureEach {
             pack_description       : pack_description,
             pack_format            : pack_format,
 
-            target_modloader       : forge_id,
-            target_version_range   : forge_version_range,
+            target_modloader       : neoforge_id,
+            target_version_range   : neo_version_range,
 
             battleroyale_version_range: battleroyale_version_range
     ]
