@@ -1,4 +1,4 @@
-package xiao.cbraddon.config.common.game.zone;
+package xiao.cbraddon.config.common.game.zone.zonefunc.custom;
 
 import com.google.gson.JsonObject;
 import net.minecraft.world.phys.Vec3;
