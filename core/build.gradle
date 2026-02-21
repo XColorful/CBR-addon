@@ -17,7 +17,7 @@ dependencies {
 }
 
 jar {
-    archiveBaseName.set("cbr-addon")
+    archiveBaseName.set(mod_id)
     archiveVersion.set(mod_version)
     archiveClassifier.set("core")
 }
