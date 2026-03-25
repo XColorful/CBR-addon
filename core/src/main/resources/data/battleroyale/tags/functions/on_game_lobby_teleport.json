@@ -1,5 +1,6 @@
 {
   "replace": false,
   "values": [
+    "cbraddon:on_game_lobby_teleport/reject_non_eliminated_teleport"
   ]
 }
