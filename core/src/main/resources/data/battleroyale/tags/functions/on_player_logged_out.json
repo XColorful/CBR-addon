@@ -1,5 +1,6 @@
 {
   "replace": false,
   "values": [
+    "cbraddon:on_player_logged_out/player_leave"
   ]
 }

@@ -1,5 +1,6 @@
 {
   "replace": false,
   "values": [
+    "cbraddon:on_game_player_death_finish/player_death"
   ]
 }

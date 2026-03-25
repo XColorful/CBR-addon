@@ -1,5 +1,6 @@
 {
   "replace": false,
   "values": [
+    "cbraddon:on_game_start_finish/start_game"
   ]
 }

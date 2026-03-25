@@ -1,5 +1,6 @@
 {
   "replace": false,
   "values": [
+    "cbraddon:on_game_lobby_teleport_finish/lobby_teleport"
   ]
 }
