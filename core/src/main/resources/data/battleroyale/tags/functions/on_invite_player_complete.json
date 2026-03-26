@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "cbraddon:on_invite_player_complete/complete_invite"
+  ]
+}
