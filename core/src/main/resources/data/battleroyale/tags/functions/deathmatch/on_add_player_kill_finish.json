@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "cbraddon:deathmatch/on_add_player_kill_finish/add_player_kill"
+  ]
+}
