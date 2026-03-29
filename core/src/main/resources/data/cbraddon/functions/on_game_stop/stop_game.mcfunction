@@ -14,5 +14,5 @@ execute if data storage battleroyale:temp {hasWinner: 1b} run function cbraddon:
 data remove storage battleroyale:temp hasWinner
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1

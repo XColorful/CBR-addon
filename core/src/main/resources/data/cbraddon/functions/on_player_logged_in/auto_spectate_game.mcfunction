@@ -28,5 +28,5 @@ data remove storage battleroyale:temp isStanding
 data remove storage battleroyale:temp spectateGame
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1
