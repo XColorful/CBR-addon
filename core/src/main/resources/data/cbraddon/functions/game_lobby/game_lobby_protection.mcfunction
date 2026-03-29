@@ -13,7 +13,7 @@ execute if entity @s[gamemode=creative] run return 0
 
 # 清理临时数据
 # Clear temp data
-data remove storage battleroyale:temp isInRange
+data remove storage battleroyale:temp isInLobbyRange
 
 # 取消事件
 # Cancel the event
