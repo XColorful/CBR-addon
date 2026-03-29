@@ -12,6 +12,11 @@ execute if data storage battleroyale:temp {isInLobbyRange: 0b} run return 0
 # Check creative mode
 execute if entity @s[gamemode=creative] run return 0
 
+# 提示大厅保护
+# Notify lobby protection
+tellraw @a {"text": "Game Lobby Protection", "color": "red"}
+function cbraddon:sounds/deny_sound
+
 # --------return--------
 
 # 清理临时数据
