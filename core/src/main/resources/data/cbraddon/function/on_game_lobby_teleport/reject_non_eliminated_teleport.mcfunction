@@ -12,7 +12,7 @@ execute if data storage battleroyale:temp {isStanding: 0b} run return 0
 
 # 提示当前在游戏中
 # Game is currently in progress, unable to perform this action
-tellraw @s [{"text":""}, {"translate":"battleroyale.message.game_in_progress", "color":"red"}, {"text":", "}, {"text": "Click to leave team", "bold":true, "italic":true, "underlined":true, "hoverEvent": {"action":"show_text", "contents":[{"text": "/battleroyale team leave"}]}, "clickEvent": {"action":"run_command", "value": "/battleroyale team leave"}}]
+tellraw @s [{"text":""}, {"translate":"battleroyale.message.game_in_progress", "color":"red"}, {"text":", "}, {"text": "Click to leave team", "bold":true, "italic":true, "underlined":true, "hover_event": {"action":"show_text", "value":[{"text": "/battleroyale team leave"}]}, "click_event": {"action":"run_command", "command": "/battleroyale team leave"}}]
 
 execute at @s run function cbraddon:sounds/deny_sound
 
