@@ -12,6 +12,14 @@ scoreboard players set autoSpectate cbraddon 0
 # Reject lobby teleport in game
 scoreboard players set banTpInGame cbraddon 0
 
+# 通过方块加入队伍
+# Join team by block
+scoreboard players set joinTeamByBlock cbraddon 0
+
+# 强制加入队伍
+# Force join team
+scoreboard players set forceJoinTeam cbraddon 0
+
 # 玩家效果
 # Player effects
 scoreboard players set playerEffects cbraddon 0
