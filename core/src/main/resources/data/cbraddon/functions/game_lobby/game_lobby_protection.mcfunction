@@ -1,3 +1,6 @@
+execute unless score lobbyProtect cbraddon matches 1.. run return 0
+# --------Option--------
+
 # --------Start--------
 
 # 检查是否在游戏大厅内

@@ -1,3 +1,6 @@
+execute unless score autoSpectate cbraddon matches 1.. run return 0
+# --------Option--------
+
 # 检查当前是否在游戏中
 # Check IGameManager::isInGame
 execute store result storage battleroyale:temp isInGame byte 1 run battleroyale api gameManager isInGame

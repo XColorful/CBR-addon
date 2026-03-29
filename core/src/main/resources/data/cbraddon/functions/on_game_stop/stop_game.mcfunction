@@ -1,3 +1,6 @@
+execute unless score gameEffects cbraddon matches 1.. run return 0
+# --------Option--------
+
 # 判断是否是正常结算
 # Check IGameManager::hasWinner
 execute store result storage battleroyale:temp hasWinner byte 1 run battleroyale api gameManager hasWinner

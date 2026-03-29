@@ -1,3 +1,6 @@
+execute unless score gameEffects cbraddon matches 1.. run return 0
+# --------Option--------
+
 # --------Start--------
 
 # 升级音效
