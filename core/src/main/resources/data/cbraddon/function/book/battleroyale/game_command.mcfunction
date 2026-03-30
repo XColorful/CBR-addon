@@ -1,0 +1,34 @@
+# 先清除已有的书
+# Clear duplicate book
+clear @s written_book[custom_data={title:"CBR Game command"}]
+
+# --------Start--------
+
+# <Page 1>
+# /cbr game load
+# /cbr game init
+# /cbr game start
+# /cbr game stop
+
+# <Page 2>
+# /cbr game lobby
+# /cbr game toLobby
+# /cbr game offset
+# /cbr game offset <xyz>
+
+# <Page 3>
+# /cbr game selected
+# /cbr game spectate
+# /cbr game gameId
+# ---- Github Wiki ----
+# https://github.com/XColorful/BattleRoyale/wiki/Game-command
+
+give @s written_book[custom_data={title:"CBR Game command"},custom_name={"translate":"battleroyale.command.cbr_game","italic":false,"color":"light_purple"},written_book_content={title:"CBR Game command",author:"CBR addon",pages:[["",{"text":"<","color":"light_purple"},{"translate":"battleroyale.command.cbr_game","color":"light_purple"},{"text":">","color":"light_purple"},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_load","color":"aqua"},{"text":"\n"},{"text":"/cbr game load","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game load"}},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_init","color":"aqua"},{"text":"\n"},{"text":"/cbr game init","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game init"}},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_start","color":"aqua"},{"text":"\n"},{"text":"/cbr game start","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game start"}},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_stop","color":"aqua"},{"text":"\n"},{"text":"/cbr game stop","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game stop"}}],["",{"text":"<","color":"light_purple"},{"translate":"battleroyale.command.cbr_game","color":"light_purple"},{"text":">","color":"light_purple"},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_lobby","italic":false},{"text":"\n"},{"text":"/cbr game lobby","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game lobby"}},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_tolobby","italic":false},{"text":"\n"},{"text":"/cbr game toLobby","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game toLobby"}},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_offset","color":"aqua"},{"text":"\n"},{"text":"/cbr game offset","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game offset"}},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_offset_xyz","color":"aqua"},{"text":"\n"},{"text":"/cbr game offset <xyz>","italic":true,"color":"gray"}],["",{"text":"<","color":"light_purple"},{"translate":"battleroyale.command.cbr_game","color":"light_purple"},{"text":">","color":"light_purple"},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_selected","color":"aqua"},{"text":"\n"},{"text":"/cbr game selected","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game selected"}},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_spectate","italic":false},{"text":"\n"},{"text":"/cbr game spectate","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game spectate"}},{"text":"\n"},{"translate":"battleroyale.command.cbr_game_gameid","italic":false},{"text":"\n"},{"text":"/cbr game gameId","italic":true,"color":"gray","click_event":{"action":"run_command","command":"/cbr game gameId"}},{"text":"\n"},{"text":"---- "},{"text":"Github Wiki","color":"blue","underlined":true,"click_event":{"action":"open_url","url":"https://github.com/XColorful/BattleRoyale/wiki/Game-command"}},{"text":" ----"}]]}]
+
+function cbraddon:sounds/book_sound
+
+# --------return--------
+
+# 正常执行
+# Command.SINGLE_SUCCESS
+return 1

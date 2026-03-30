@@ -1,9 +1,9 @@
 # --------Start--------
 
-execute at @s run function cbraddon:sounds/teleport_sound
+function cbraddon:on_game_spectate/spectate_game_effect
 
 # --------return--------
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1

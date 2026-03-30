@@ -1,11 +1,9 @@
 # --------Start--------
 
-# 升级音效
-# Start sound
-execute as @standinggameplayers.player at @s run function cbraddon:sounds/goal_sound
+function cbraddon:on_game_start_finish/start_game_effect
 
 # --------return--------
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1
