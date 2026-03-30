@@ -6,5 +6,5 @@ execute as @eliminatedgameplayers.player at @s run function cbraddon:on_game_sto
 # --------return--------
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1
