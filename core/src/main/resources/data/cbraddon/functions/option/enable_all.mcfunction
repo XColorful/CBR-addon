@@ -48,6 +48,10 @@ scoreboard players set allSounds cbraddon 1
 # DeathMatch mode
 scoreboard players set deathMatch cbraddon 1
 
+# 登录物品
+# Login item
+scoreboard players set loginItem cbraddon 1
+
 # --------return--------
 
 # 正常执行

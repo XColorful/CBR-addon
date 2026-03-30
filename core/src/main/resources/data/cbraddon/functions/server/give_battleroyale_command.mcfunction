@@ -23,6 +23,10 @@ function cbraddon:book/battleroyale/utility_command
 # (Command book) Join a specified team
 function cbraddon:book/battleroyale/team_join_command
 
+# 玩家指令
+# Player command
+function cbraddon:book/battleroyale/player_command
+
 # --------return--------
 
 # 正常执行
