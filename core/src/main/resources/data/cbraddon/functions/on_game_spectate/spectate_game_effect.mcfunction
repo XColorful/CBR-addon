@@ -3,12 +3,7 @@ execute unless score gameEffects cbraddon matches 1.. run return 0
 
 # --------Start--------
 
-# 发送结束游戏标题
-# Send "Game Stop" title
-title @s times 10 80 20
-title @s title {"text":"Game Stop", "color":"aqua"}
-
-function cbraddon:sounds/sad_sound
+execute at @s run function cbraddon:sounds/teleport_sound
 
 # --------return--------
 

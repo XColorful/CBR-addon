@@ -1,9 +1,6 @@
-execute unless score gameEffects cbraddon matches 1.. run return 0
-# --------Option--------
-
 # --------Start--------
 
-execute at @s run function cbraddon:sounds/dimension_sound
+function cbraddon:on_game_lobby_teleport_finish/lobby_teleport_effect
 
 # --------return--------
 

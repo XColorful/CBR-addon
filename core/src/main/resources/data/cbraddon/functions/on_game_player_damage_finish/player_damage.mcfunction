@@ -1,9 +1,6 @@
-execute unless score playerEffects cbraddon matches 1.. run return 0
-# --------Option--------
-
 # --------Start--------
 
-function cbraddon:sounds/damage_sound
+function cbraddon:on_game_player_damage_finish/player_damage_effect
 
 # --------return--------
 

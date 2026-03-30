@@ -1,9 +1,6 @@
-execute unless score playerEffects cbraddon matches 1.. run return 0
-# --------Option--------
-
 # --------Start--------
 
-function cbraddon:sounds/revive_sound
+function cbraddon:on_game_player_revive_finish/player_revive_effect
 
 # --------return--------
 

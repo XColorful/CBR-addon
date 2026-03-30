@@ -1,6 +1,6 @@
 # --------Start--------
 
-execute as @gameplayers run execute at @s run function cbraddon:sounds/interrupt_sound
+function cbraddon:on_game_stop/game_interrupted_effect
 
 # --------return--------
 

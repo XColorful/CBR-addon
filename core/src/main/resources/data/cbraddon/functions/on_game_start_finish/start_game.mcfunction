@@ -1,11 +1,6 @@
-execute unless score gameEffects cbraddon matches 1.. run return 0
-# --------Option--------
-
 # --------Start--------
 
-# 升级音效
-# Start sound
-execute as @standinggameplayers.player at @s run function cbraddon:sounds/goal_sound
+function cbraddon:on_game_start_finish/start_game_effect
 
 # --------return--------
 

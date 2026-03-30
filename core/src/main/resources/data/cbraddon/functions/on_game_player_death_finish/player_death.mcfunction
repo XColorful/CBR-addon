@@ -1,11 +1,6 @@
-execute unless score playerEffects cbraddon matches 1.. run return 0
-# --------Option--------
-
 # --------Start--------
 
-function cbraddon:sounds/thunder_sound
-
-function cbraddon:sounds/death_sound
+function cbraddon:on_game_player_death_finish/player_death_effect
 
 # --------return--------
 
