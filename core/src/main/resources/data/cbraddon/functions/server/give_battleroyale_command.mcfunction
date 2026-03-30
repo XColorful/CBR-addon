@@ -19,8 +19,8 @@ function cbraddon:book/battleroyale/loot_command
 # Utility command
 function cbraddon:book/battleroyale/utility_command
 
-# 加入指定队伍
-# Join a specified team
+# (指令书) 加入指定队伍
+# (Command book) Join a specified team
 function cbraddon:book/battleroyale/team_join_command
 
 # --------return--------

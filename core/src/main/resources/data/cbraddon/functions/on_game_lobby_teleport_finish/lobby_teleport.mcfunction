@@ -2,6 +2,8 @@
 
 function cbraddon:on_game_lobby_teleport_finish/lobby_teleport_effect
 
+function cbraddon:server/give_lobby_item
+
 # --------return--------
 
 # 正常执行
