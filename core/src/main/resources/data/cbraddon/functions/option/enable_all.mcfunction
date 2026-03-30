@@ -36,6 +36,10 @@ scoreboard players set teamEffects cbraddon 1
 # Game effects
 scoreboard players set gameEffects cbraddon 1
 
+# 物品效果
+# Item effects
+scoreboard players set itemEffects cbraddon 1
+
 # 所有音效
 # All sounds
 scoreboard players set allSounds cbraddon 1
