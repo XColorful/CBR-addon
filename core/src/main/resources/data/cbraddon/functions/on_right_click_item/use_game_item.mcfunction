@@ -10,6 +10,12 @@ execute if data entity @s SelectedItem{id:"minecraft:recovery_compass"} run cbr 
 execute if data entity @s SelectedItem{id:"minecraft:recovery_compass"} run function cbraddon:on_right_click_item/use_item_function_success_effect
 execute if data entity @s SelectedItem{id:"minecraft:recovery_compass"} run return -1
 
+# [观战]
+# [Spectate]
+execute if data entity @s SelectedItem{id:"minecraft:spyglass"} run cbr game spectate
+execute if data entity @s SelectedItem{id:"minecraft:spyglass"} run function cbraddon:on_right_click_item/use_item_function_success_effect
+execute if data entity @s SelectedItem{id:"minecraft:spyglass"} run return -1
+
 # --------return--------
 
 # 正常执行
