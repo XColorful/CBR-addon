@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "cbraddon:on_right_click_item/get_item",
+    "cbraddon:on_right_click_item/use_item_function"
+  ]
+}

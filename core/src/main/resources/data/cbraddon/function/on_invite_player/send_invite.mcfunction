@@ -1,9 +1,9 @@
 # --------Start--------
 
-execute at @s run function cbraddon:sounds/click_sound
+function cbraddon:on_invite_player/send_invite_effect
 
 # --------return--------
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1

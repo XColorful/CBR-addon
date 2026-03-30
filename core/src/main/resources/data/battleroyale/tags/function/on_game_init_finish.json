@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "cbraddon:on_game_init_finish/init_game"
+    "cbraddon:on_game_init_finish/init_game",
+    "cbraddon:server/give_game_init_item"
   ]
 }
