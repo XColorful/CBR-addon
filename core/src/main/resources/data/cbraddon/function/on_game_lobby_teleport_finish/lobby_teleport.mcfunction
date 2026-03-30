@@ -1,9 +1,11 @@
 # --------Start--------
 
-execute at @s run function cbraddon:sounds/dimension_sound
+function cbraddon:on_game_lobby_teleport_finish/lobby_teleport_effect
+
+function cbraddon:server/give_lobby_item
 
 # --------return--------
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1
