@@ -4,6 +4,10 @@
 # (Command book) Join a specified team
 function cbraddon:book/battleroyale/team_join_command
 
+# 传送至大厅
+# Teleport to lobby
+function cbraddon:item/game_compass_tolobby
+
 # --------return--------
 
 # 正常执行

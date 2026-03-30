@@ -7,6 +7,9 @@ execute unless data entity @s SelectedItem.tag.itemFunction run return 0
 
 # --------Start--------
 
+execute store result storage battleroyale:temp returnValue int 1 run function cbraddon:on_right_click_item/use_game_item
+execute if data storage battleroyale:temp {returnValue: -1} run return -1
+
 # --------return--------
 
 # 清理临时数据
