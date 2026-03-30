@@ -6,6 +6,12 @@ execute unless data entity @s SelectedItem{id:"minecraft:wooden_sword"} run retu
 
 function cbraddon:server/give_login_item
 
+# 检查是否为创造模式
+# Check if player is in creative mode
+execute if entity @s[gamemode=!creative] run return 1
+
+function cbraddon:server/give_op_item
+
 # --------return--------
 
 # 正常执行
