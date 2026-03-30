@@ -1,9 +1,9 @@
 # --------Start--------
 
-function cbraddon:sounds/revive_sound
+function cbraddon:on_game_player_revive_finish/player_revive_effect
 
 # --------return--------
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1
