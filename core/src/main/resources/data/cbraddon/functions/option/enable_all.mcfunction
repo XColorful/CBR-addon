@@ -20,6 +20,10 @@ scoreboard players set joinTeamByBlock cbraddon 1
 # Force join team
 scoreboard players set forceJoinTeam cbraddon 1
 
+# 物品功能
+# Item function
+scoreboard players set itemFunction cbraddon 1
+
 # 玩家效果
 # Player effects
 scoreboard players set playerEffects cbraddon 1
