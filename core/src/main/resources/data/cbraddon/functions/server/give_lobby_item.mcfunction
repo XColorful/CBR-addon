@@ -12,6 +12,10 @@ execute if data storage battleroyale:temp {isStanding: 0b} run function cbraddon
 # Teleport to lobby
 function cbraddon:item/game_compass_tolobby
 
+# 传送至生存模式大厅
+# Teleport to survival mode lobby
+function cbraddon:item/survival_compass_tolobby
+
 # --------return--------
 
 # 清理临时数据
