@@ -1,0 +1,31 @@
+# 先清除已有的书
+# Clear duplicate book
+clear @s written_book{title:"CBR Utility command"}
+
+# --------Start--------
+
+# <Page 1>
+# /cbr utility survivallobby
+# /cbr utility tosurvivallobby
+# /cbr utility lootconfig <id> <type>
+# /cbr utility lootconfig <id> toLootTable
+
+# <Page 2>
+# /cbr utility profile save <id>
+# /cbr utility profile load <id>
+# /cbr utility team remove
+# /cbr utility team rebuild
+
+# <Page 3>
+# ---- Github Wiki ----
+# https://github.com/XColorful/BattleRoyale/wiki/Utility-config
+
+give @s written_book{title:"CBR Utility command",author:"CBR addon",display:{Name:'{"translate":"battleroyale.command.cbr_utility","italic":false,"color":"light_purple"}'},pages:['["",{"text":"<","color":"light_purple"},{"translate":"battleroyale.command.cbr_utility","color":"light_purple"},{"text":">","color":"light_purple"},{"text":"\\n"},{"translate":"battleroyale.command.cbr_utility_survivallobby","italic":false},{"text":"\\n"},{"text":"/cbr utility survivallobby","italic":true,"color":"gray","clickEvent":{"action":"run_command","value":"/cbr utility survivallobby"}},{"text":"\\n"},{"translate":"battleroyale.command.cbr_utility_tosurvivallobby","italic":false},{"text":"\\n"},{"text":"/cbr utility tosurvivallobby","italic":true,"color":"gray","clickEvent":{"action":"run_command","value":"/cbr utility tosurvivallobby"}},{"text":"\\n"},{"translate":"battleroyale.command.cbr_utility_lootconfig","color":"light_purple"},{"text":"\\n"},{"text":"/cbr utility lootconfig <id> <type>","italic":true,"color":"gray"},{"text":"\\n"},{"translate":"battleroyale.command.cbr_utility_lootconfig_id_toloottable","color":"light_purple"},{"text":"\\n"},{"text":"/cbr utility lootconfig <id> toLootTable","italic":true,"color":"gray"}]','["",{"text":"<","color":"light_purple"},{"translate":"battleroyale.command.cbr_utility","color":"light_purple"},{"text":">","color":"light_purple"},{"text":"\\n"},{"translate":"battleroyale.command.cbr_utility_profile_save","color":"aqua"},{"text":"\\n"},{"text":"/cbr utility profile save <id>","italic":true,"color":"gray"},{"text":"\\n"},{"translate":"battleroyale.command.cbr_utility_profile_load","color":"aqua"},{"text":"\\n"},{"text":"/cbr utility profile load <id>","italic":true,"color":"gray"},{"text":"\\n"},{"translate":"battleroyale.command.cbr_utility_team_remove","color":"aqua"},{"text":"\\n"},{"text":"/cbr utility team remove","italic":true,"color":"gray"},{"text":"\\n"},{"translate":"battleroyale.command.cbr_utility_team_rebuild","color":"aqua"},{"text":"\\n"},{"text":"/cbr utility team rebuild","italic":true,"color":"gray"}]','["",{"text":"<","color":"light_purple"},{"translate":"battleroyale.command.cbr_utility","color":"light_purple"},{"text":">","color":"light_purple"},{"text":"\\n"},{"text":"---- ","color":"reset"},{"text":"Github Wiki","color":"blue","underlined":true,"clickEvent":{"action":"open_url","value":"https://github.com/XColorful/BattleRoyale/wiki/Utility-config"}},{"text":" ----","color":"reset"}]']}
+
+function cbraddon:sounds/book_sound
+
+# --------return--------
+
+# 正常执行
+# Command.SINGLE_SUCCESS
+return 1

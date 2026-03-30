@@ -1,3 +1,6 @@
+execute unless score gameEffects cbraddon matches 1.. run return 0
+# --------Option--------
+
 # --------Start--------
 
 # 发送结束游戏标题
@@ -10,5 +13,5 @@ function cbraddon:sounds/sad_sound
 # --------return--------
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1
