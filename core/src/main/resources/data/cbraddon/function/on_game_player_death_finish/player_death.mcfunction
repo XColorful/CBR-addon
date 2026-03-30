@@ -1,11 +1,9 @@
 # --------Start--------
 
-function cbraddon:sounds/thunder_sound
-
-function cbraddon:sounds/death_sound
+function cbraddon:on_game_player_death_finish/player_death_effect
 
 # --------return--------
 
 # 正常执行
-# Comman.SINGLE_SUCCESS
+# Command.SINGLE_SUCCESS
 return 1
