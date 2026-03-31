@@ -1,6 +1,6 @@
 # 检查是否手持木剑
 # Check wooden sword
-execute unless data entity @s SelectedItem{id:"minecraft:wooden_sword"} run return 0
+execute unless items entity @s weapon.mainhand minecraft:wooden_sword run return 0
 
 # 检查是否为创造模式
 # Check if player is in creative mode
