@@ -14,7 +14,7 @@
 
 ### 数据包扩展
 
-- 使用`/function cbraddon:option/create`以启用数据包功能
+- 在创造模式下右键`木剑`以启用数据包功能
 - 内置数据包调用[自定义大逃杀API指令](https://github.com/XColorful/BattleRoyale/wiki/API-command)
 - 模组事件驱动数据包：为游戏事件添加音效提示，提供事件钩子
 
@@ -34,7 +34,7 @@ This mod functions as an extension for [Custom BattleRoyale](https://github.com/
 
 ### Datapack extension
 
-- Use `/function cbraddon:option/create` to enable datapack features
+- Right-click `wooden sword` in creative mode to enable datapack features
 - Built-in datapacks calling [Custom BattleRoyale API command](https://github.com/XColorful/BattleRoyale/wiki/API-command#English)
 - Mod event-driven datapacks: adds sound effects for game events, provides event hooks
 
