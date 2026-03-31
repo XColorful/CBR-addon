@@ -1,5 +1,9 @@
 # --------Start--------
 
+# 禁用加载时功能
+# Disable load.mcfunction
+scoreboard players set disableLoad cbraddon 1
+
 # 大厅保护
 # Lobby protection
 scoreboard players set lobbyProtect cbraddon 0
