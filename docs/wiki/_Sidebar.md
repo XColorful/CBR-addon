@@ -1,0 +1,21 @@
+> 🌐 Language / 语言
+> - [**Jump to English Section**](#English)
+> - [**回到中文顶部**](#)
+---
+- [主页](https://github.com/XColorful/CBR-addon/wiki)
+	- [数据包扩展](https://github.com/XColorful/CBR-addon/wiki/Datapack-extension)
+		- [选项记分板](https://github.com/XColorful/CBR-addon/wiki/Option-scoreboard)
+		- [扩展机制](https://github.com/XColorful/CBR-addon/wiki/Extened-feature)
+		- [指令书](https://github.com/XColorful/CBR-addon/wiki/Command-book)
+		- [物品功能](https://github.com/XColorful/CBR-addon/wiki/Item-function)
+	- [配置扩展](https://github.com/XColorful/CBR-addon/wiki/Config-extension)
+		- [区域配置扩展](https://github.com/XColorful/CBR-addon/wiki/Zone-config-addon)
+
+- [Home](https://github.com/XColorful/CBR-addon/wiki#English)
+	- [Datapack extension](https://github.com/XColorful/CBR-addon/wiki/Datapack-extension#English)
+		- [Option scoreboard](https://github.com/XColorful/CBR-addon/wiki/Option-scoreboard#English)
+		- [Extended feature](https://github.com/XColorful/CBR-addon/wiki/Extened-feature)
+		- [Command book](https://github.com/XColorful/CBR-addon/wiki/Command-book#English)
+		- [Item function](https://github.com/XColorful/CBR-addon/wiki/Item-function#English)
+	- [Config extension](https://github.com/XColorful/CBR-addon/wiki/Config-extension#English)
+		- [Zone config addon](https://github.com/XColorful/CBR-addon/wiki/Zone-config-addon#English)
