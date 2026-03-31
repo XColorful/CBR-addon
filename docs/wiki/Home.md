@@ -16,6 +16,10 @@
 
 ### 扩展机制
 
+- [服务器](https://github.com/XColorful/CBR-addon/wiki/Extended-feature#服务器)
+- [游戏](https://github.com/XColorful/CBR-addon/wiki/Extended-feature#游戏)
+- [效果](https://github.com/XColorful/CBR-addon/wiki/Extended-feature#效果)
+
 ### 指令书
 
 - [大逃杀指令书](https://github.com/XColorful/CBR-addon/wiki/Command-book#大逃杀指令书)
@@ -57,6 +61,10 @@
 - [Effect](https://github.com/XColorful/CBR-addon/wiki/Option-scoreboard#Effect)
 
 ### Extended feature
+
+- [Server](https://github.com/XColorful/CBR-addon/wiki/Extended-feature#Server)
+- [Game](https://github.com/XColorful/CBR-addon/wiki/Extended-feature#Game)
+- [Effect](https://github.com/XColorful/CBR-addon/wiki/Extended-feature#Effect)
 
 ### Command book
 
