@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "cbraddon:on_survival_lobby_teleport_finish/lobby_teleport"
+  ]
+}
