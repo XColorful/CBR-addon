@@ -6,8 +6,8 @@ clear @s minecraft:wooden_sword{activateItem:1b}
 
 # [创造模式] [右键] - CBR addon
 # 在 创造模式 下 右键 以启用 CBR addon
-# [Creative Mode] [Right Buttom] - CBR addon
-# Click Right Buttom in Creative Mode to enable CBR addon
+# [Creative Mode] [Right Button] - CBR addon
+# Click Right Button in Creative Mode to enable CBR addon
 give @s minecraft:wooden_sword{activateItem:1b,display:{Name:'[{"text":"[","color":"gray","italic":false},{"translate":"gameMode.creative","color":"light_purple","bold":true},{"text":"] ","color":"gray","bold":false},{"text":"[","color":"gray"},{"translate":"key.mouse.right","color":"gold","bold":true},{"text":"] ","color":"gray","bold":false},{"text":"- ","color":"white"},{"text":"CBR addon","color":"aqua"}]',Lore:['[{"text":"在 ","color":"gray","italic":false},{"translate":"gameMode.creative"},{"text":" 下 "},{"translate":"key.mouse.right"},{"text":" 以启用 CBR addon"}]','[{"text":"Click ","color":"gray","italic":false},{"translate":"key.mouse.right"},{"text":" in "},{"translate":"gameMode.creative"},{"text":" to enable CBR addon"}]']}}
 
 # 取消自身监听
