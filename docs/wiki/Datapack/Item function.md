@@ -13,7 +13,9 @@
 ### 加载时功能
 
 在 _minecraft:load_ 触发：
-- 当未[禁用加载时功能](https://github.com/XColorful/CBR-addon/wiki/Option-scoreboard#禁用加载时功能)时，为 _cbraddon:load/get_item_once_ [注册模组事件](https://github.com/XColorful/BattleRoyale/wiki/Function-API-command#注册模组事件)监听`RIGHT_CLICK_ITEM_EVENT`
+- 当未[禁用加载时功能](https://github.com/XColorful/CBR-addon/wiki/Option-scoreboard#禁用加载时功能)时：
+	- 为 _cbraddon:load/get_item_once_ [注册模组事件](https://github.com/XColorful/BattleRoyale/wiki/Function-API-command#注册模组事件)监听`RIGHT_CLICK_ITEM_EVENT`
+	- 为 _cbraddon:load/get_activate_item_once_ [注册模组事件](https://github.com/XColorful/BattleRoyale/wiki/Function-API-command#注册模组事件)监听`PLAYER_LOGGED_IN_EVENT`，在第一个玩家登录时给予一把木剑
 - 当创造模式右键`木剑`后：
 	- 启用所有[实体选择器类型](https://github.com/XColorful/BattleRoyale/wiki/Temp-data-command#启用实体选择器类型)
 	- 切换[函数配置](https://github.com/XColorful/BattleRoyale/wiki/Function-config#单个配置) _example_all_event_tags.json_，如无则[生成函数配置](https://github.com/XColorful/BattleRoyale/wiki/Example-command#函数配置)、[重载函数配置](https://github.com/XColorful/BattleRoyale/wiki/Reload-command#函数配置)、[切换函数配置](https://github.com/XColorful/BattleRoyale/wiki/Config-command#服务端配置) _example_all_event_tags.json_
@@ -53,7 +55,9 @@ Creative mode:
 ### Load function
 
 Triggered at _minecraft:load_:
-- When [Disable load function](https://github.com/XColorful/CBR-addon/wiki/Option-scoreboard#Disable-load-function), [Register mod event](https://github.com/XColorful/BattleRoyale/wiki/Function-API-command#Register-mod-event) _cbraddon:load/get_item_once_ to listen for `RIGHT_CLICK_ITEM_EVENT`.
+- When [Disable load function](https://github.com/XColorful/CBR-addon/wiki/Option-scoreboard#Disable-load-function) is not enabled:
+	- [Register mod event](https://github.com/XColorful/BattleRoyale/wiki/Function-API-command#Register-mod-event) _cbraddon:load/get_item_once_ to listen for `RIGHT_CLICK_ITEM_EVENT`.
+	- [Register mod event](https://github.com/XColorful/BattleRoyale/wiki/Function-API-command#Register-mod-event) _cbraddon:load/get_activate_item_once_ to listen for `PLAYER_LOGGED_IN_EVENT` and give a wooden sword to the first player who logs in.
 - After right-click a `wooden sword` in creative mode：
 	- Enable all [entity selector type](https://github.com/XColorful/BattleRoyale/wiki/Temp-data-command#Enable-entity-selector-type).
 	- Switch [Function config](https://github.com/XColorful/BattleRoyale/wiki/Function-config#Single-function-config) to _example_all_event_tags.json_; if it does not exist, [Generate function config](https://github.com/XColorful/BattleRoyale/wiki/Example-command#Function-config), [reload function config](https://github.com/XColorful/BattleRoyale/wiki/Reload-command#Function-config), and [switch function config](https://github.com/XColorful/BattleRoyale/wiki/Config-command#Server-config) to _example_all_event_tags.json_.
