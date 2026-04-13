@@ -1,7 +1,16 @@
 ### 0.5.x
 
-#### 0.5.3
+#### 0.5.4
+> Add 26.1.2neoforge
+- Auto give wooden sword (for activating CBR addon datapack) when first login (In 1.21.10+ single player is second login)
+- Add built-in void dimension (battleroyale:world) for game world
+- Give login item to respawned player
+- Give survival lobby item
+- Restrict lobby protection message to the triggering player
+- Add CBR 0.5.4 event tag
 
+#### 0.5.3
+> Add 26.1neoforge
 Right-click wooden sword in creative mode to enable all datapack functions
 
 Add option scoreboard (cbraddon):
