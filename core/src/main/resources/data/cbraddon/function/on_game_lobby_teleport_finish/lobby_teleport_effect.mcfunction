@@ -3,7 +3,7 @@ execute unless score gameEffects cbraddon matches 1.. run return 0
 
 # --------Start--------
 
-execute at @s run function cbraddon:sounds/dimension_sound
+execute at @s run function cbraddon:sounds/teleport_sound
 
 # --------return--------
 
