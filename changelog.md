@@ -1,5 +1,9 @@
 ### 0.5.x
 
+#### 0.5.5
+- Replace lobby teleport sound from dimension to teleport
+- Add CBR 0.5.5 event tag
+
 #### 0.5.4
 > Add 26.1.2neoforge
 - Auto give wooden sword (for activating CBR addon datapack) when first login (In 1.21.10+ single player is second login)
