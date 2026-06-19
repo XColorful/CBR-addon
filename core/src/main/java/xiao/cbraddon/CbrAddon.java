@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
 import xiao.battleroyale.BattleRoyale;
 import xiao.battleroyale.api.common.McSide;
+import xiao.cbraddon.config.common.game.zone.ProgressBarManager;
 import xiao.cbraddon.event.custom.CustomEventHandler;
 
 import java.util.Random;
@@ -21,6 +22,8 @@ public class CbrAddon {
         if (initialized) return;
 
         CbrAddon.mcSide = mcSide;
+
+        ProgressBarManager.init(mcSide);
 
         CustomEventHandler.registerAll(BattleRoyale.getEventRegister());
 
