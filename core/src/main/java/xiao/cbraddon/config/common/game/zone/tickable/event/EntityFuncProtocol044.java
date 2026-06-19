@@ -55,7 +55,7 @@ public class EntityFuncProtocol044 {
                     allowOnBorder, globalShrinkRatio, needShuffle,
                     randomRange, findGround, limitToBottom, limitToTop, additionalOffset, ignoreOutside, relativeMovementRandomRange);
         } catch (Exception e) {
-            CbrAddon.LOGGER.debug("EntityFuncProtocol044: Failed to parse by cbra:0.4.4 protocol from jsonTag: {}", jsonTag, e);
+            CbrAddon.LOGGER.warn("EntityFuncProtocol044: Failed to parse by cbra:0.4.4 protocol from jsonTag: {}", jsonTag, e);
             return null;
         }
     }
