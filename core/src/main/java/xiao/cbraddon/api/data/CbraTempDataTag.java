@@ -8,7 +8,7 @@ public class CbraTempDataTag {
     // cbraddon.json
     public static final String CBR_ADDON = CbrAddon.MOD_ID;
     public static final String ENABLE_PROGRESS_BAR = "enableProgressBar";
-    public static final String PROGRESS_BAR_PROTOCOL = "progressBarProtocol";
+    public static final String PROGRESS_BAR = "progressBar";
     public static final String ZONE_ID_REGEX = ProgressBarProtocol057.ZONE_ID_REGEX;
     public static final String MOVE_DELAY_COLOR = ProgressBarProtocol057.MOVE_DELAY_COLOR;
     public static final String MOVE_DELAY_OVERLAY = ProgressBarProtocol057.MOVE_DELAY_OVERLAY;

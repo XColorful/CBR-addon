@@ -11,6 +11,7 @@ public class CommandArg extends xiao.battleroyale.command.CommandArg {
     public static final String DISABLE = "disable";
     public static final String PROGRESS_BAR_COLOR = "color";
     public static final String PROGRESS_BAR_OVERLAY = "overlay";
+    public static final String REGEX = "regex";
 
     public static final String PROGRESS_BAR = "progressBar";
     public static final String ZONE_ID_REGEX = "zoneId_regex";

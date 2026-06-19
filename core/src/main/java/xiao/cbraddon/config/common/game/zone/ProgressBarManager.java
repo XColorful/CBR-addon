@@ -56,7 +56,7 @@ public class ProgressBarManager implements ICustomEventHandler {
     }
 
     private volatile ProgressBarProtocol progressBarProtocol;
-    public final UUID progressBarUUID = UUID.nameUUIDFromBytes("cbraddon:progress_bar_protocol".getBytes());
+    public final UUID progressBarUUID = UUID.nameUUIDFromBytes("cbraddon:progress_bar".getBytes());
     public ProgressBarProtocol getProgressBarProtocol() {
         return this.progressBarProtocol;
     }
@@ -106,7 +106,7 @@ public class ProgressBarManager implements ICustomEventHandler {
     }
 
     public void enable() {
-        JsonObject jsonTag = TempDataManager.get().getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL);
+        JsonObject jsonTag = TempDataManager.get().getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR);
 
         this.progressBarProtocol = ProgressBarProtocol.getConfigFromProtocol("", jsonTag != null ? jsonTag : new JsonObject());
         this.registerGameEventHandler();
@@ -141,7 +141,7 @@ public class ProgressBarManager implements ICustomEventHandler {
 
         // ----发boss栏----
         if (needSend && this.progressBarProtocol != null) {
-            this.sendProgressBarToGamePlayers(gameManager);
+            this.sendProgressBarToGamePlayers(gameManager, this.progressBarProtocol);
         }
     }
     /**
@@ -216,16 +216,16 @@ public class ProgressBarManager implements ICustomEventHandler {
         }
         return Mth.clamp(barProgress, 0f, 1f);
     }
-    private void sendProgressBarToGamePlayers(IGameManager gameManager) {
+    private void sendProgressBarToGamePlayers(IGameManager gameManager, ProgressBarProtocol protocol) {
         ServerLevel serverLevel = gameManager.getServerLevel();
         if (serverLevel == null) return;
 
         // 缩圈移动阶段
         if (this.context.moveStarted) WorldUtils.sendBossBar(serverLevel, gameManager.getTeamManager().getGamePlayers(), this.progressBarUUID, this.context.progressBarComponentCache,
-                this.context.barProgress, this.progressBarProtocol.moveTime_color, this.progressBarProtocol.moveTime_overlay);
+                this.context.barProgress, protocol.moveTime_color, protocol.moveTime_overlay);
             // 缩圈延迟阶段
         else WorldUtils.sendBossBar(serverLevel, gameManager.getTeamManager().getGamePlayers(), this.progressBarUUID, this.context.progressBarComponentCache,
-                this.context.barProgress, this.progressBarProtocol.moveDelay_color, this.progressBarProtocol.moveDelay_overlay);
+                this.context.barProgress, protocol.moveDelay_color, protocol.moveDelay_overlay);
     }
 
     @ApiStatus.Internal

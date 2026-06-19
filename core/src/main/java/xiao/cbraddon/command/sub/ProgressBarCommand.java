@@ -33,7 +33,7 @@ public class ProgressBarCommand {
                         .executes(ProgressBarCommand::disenableProgressBarProtocol)
                 )
                 .then(Commands.literal(ZONE_ID_REGEX)
-                        .then(Commands.argument(CbraTempDataTag.ZONE_ID_REGEX, StringArgumentType.string())
+                        .then(Commands.argument(REGEX, StringArgumentType.string())
                                 .executes(ProgressBarCommand::setZoneId_regex)
                         )
                 )
@@ -79,7 +79,7 @@ public class ProgressBarCommand {
         CommandSourceStack source = context.getSource();
         @NotNull ProgressBarProtocol protocol = ProgressBarManager.get().getProgressBarProtocol();
         if (protocol != null) {
-            source.sendSuccess(() -> Component.literal("ProgressBarProtocol:")
+            source.sendSuccess(() -> Component.literal("ProgressBar:")
                             .append(String.format("\n%s:%s", CbraTempDataTag.ZONE_ID_REGEX, protocol.zoneId_regex.pattern()))
                             .append(String.format("\n%s:%s", CbraTempDataTag.MOVE_DELAY_COLOR, protocol.moveDelay_color.getName()))
                             .append(String.format("\n%s:%s", CbraTempDataTag.MOVE_DELAY_OVERLAY, protocol.moveDelay_overlay.getName()))
@@ -115,65 +115,65 @@ public class ProgressBarCommand {
 
     public static int setZoneId_regex(CommandContext<CommandSourceStack> context) {
         TempDataManager tempDataManager = TempDataManager.get();
-        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL);
+        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR);
         if (jsonTag == null) jsonTag = new JsonObject();
 
-        String regex = StringArgumentType.getString(context, CbraTempDataTag.ZONE_ID_REGEX);
+        String regex = StringArgumentType.getString(context, REGEX);
         jsonTag.addProperty(CbraTempDataTag.ZONE_ID_REGEX, regex);
 
-        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL, jsonTag);
+        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR, jsonTag);
         tempDataManager.saveTempData();
         context.getSource().sendSuccess(() -> Component.literal(String.format("CbrAddon: Set %s to %s", CbraTempDataTag.ZONE_ID_REGEX, regex)), false);
         return Command.SINGLE_SUCCESS;
     }
     public static int setMoveDelay_color(CommandContext<CommandSourceStack> context) {
         TempDataManager tempDataManager = TempDataManager.get();
-        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL);
+        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR);
         if (jsonTag == null) jsonTag = new JsonObject();
 
         String color = StringArgumentType.getString(context, PROGRESS_BAR_COLOR);
         jsonTag.addProperty(CbraTempDataTag.MOVE_DELAY_COLOR, color);
 
-        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL, jsonTag);
+        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR, jsonTag);
         tempDataManager.saveTempData();
         context.getSource().sendSuccess(() -> Component.literal(String.format("CbrAddon: Set %s to %s", CbraTempDataTag.MOVE_DELAY_COLOR, color)), false);
         return Command.SINGLE_SUCCESS;
     }
     public static int setMoveDelay_overlay(CommandContext<CommandSourceStack> context) {
         TempDataManager tempDataManager = TempDataManager.get();
-        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL);
+        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR);
         if (jsonTag == null) jsonTag = new JsonObject();
 
         String overlay = StringArgumentType.getString(context, PROGRESS_BAR_OVERLAY);
         jsonTag.addProperty(CbraTempDataTag.MOVE_DELAY_OVERLAY, overlay);
 
-        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL, jsonTag);
+        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR, jsonTag);
         tempDataManager.saveTempData();
         context.getSource().sendSuccess(() -> Component.literal(String.format("CbrAddon: Set %s to %s", CbraTempDataTag.MOVE_DELAY_OVERLAY, overlay)), false);
         return Command.SINGLE_SUCCESS;
     }
     public static int setMoveTime_color(CommandContext<CommandSourceStack> context) {
         TempDataManager tempDataManager = TempDataManager.get();
-        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL);
+        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR);
         if (jsonTag == null) jsonTag = new JsonObject();
 
         String color = StringArgumentType.getString(context, PROGRESS_BAR_COLOR);
         jsonTag.addProperty(CbraTempDataTag.MOVE_TIME_COLOR, color);
 
-        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL, jsonTag);
+        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR, jsonTag);
         tempDataManager.saveTempData();
         context.getSource().sendSuccess(() -> Component.literal(String.format("CbrAddon: Set %s to %s", CbraTempDataTag.MOVE_TIME_COLOR, color)), false);
         return Command.SINGLE_SUCCESS;
     }
     public static int setMoveTime_overlay(CommandContext<CommandSourceStack> context) {
         TempDataManager tempDataManager = TempDataManager.get();
-        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL);
+        JsonObject jsonTag = tempDataManager.getJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR);
         if (jsonTag == null) jsonTag = new JsonObject();
 
         String overlay = StringArgumentType.getString(context, PROGRESS_BAR_OVERLAY);
         jsonTag.addProperty(CbraTempDataTag.MOVE_TIME_OVERLAY, overlay);
 
-        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR_PROTOCOL, jsonTag);
+        tempDataManager.writeJsonObject(CbraTempDataTag.CBR_ADDON, CbraTempDataTag.PROGRESS_BAR, jsonTag);
         tempDataManager.saveTempData();
         context.getSource().sendSuccess(() -> Component.literal(String.format("CbrAddon: Set %s to %s", CbraTempDataTag.MOVE_TIME_OVERLAY, overlay)), false);
         return Command.SINGLE_SUCCESS;
