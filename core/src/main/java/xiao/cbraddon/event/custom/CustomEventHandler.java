@@ -5,7 +5,7 @@ import xiao.battleroyale.api.event.EventPriority;
 import xiao.battleroyale.api.event.ICustomEventHandler;
 import xiao.battleroyale.api.event.ICustomEventRegister;
 import xiao.cbraddon.CbrAddon;
-import xiao.cbraddon.event.custom.game.EntityFuncHandler;
+import xiao.cbraddon.config.common.game.zone.tickable.event.EntityFuncHandler;
 
 public class CustomEventHandler {
 
