@@ -4,6 +4,11 @@
 
 > 推荐安装[Stylus](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)插件并使用配置[Stylus-Obsidian-Topaz-Nord.json](https://github.com/XColorful/XColorful.github.io/blob/main/stylus/Stylus-Obsidian-Topaz-Nord.json)
 
+## 指令
+
+[指令说明](https://github.com/XColorful/CBR-addon/wiki/Command-introduction)
+- [进度条指令](https://github.com/XColorful/CBR-addon/wiki/Progress-bar-command)
+
 ## 数据包扩展
 
 [数据包扩展](https://github.com/XColorful/CBR-addon/wiki/Datapack-extension)
@@ -46,9 +51,21 @@
 
 ### 服务端配置
 
+## 关于模组
+
+### 模组生成文件
+
+- [临时数据](https://github.com/XColorful/CBR-addon/wiki/Temp-data)
+
 # English
 
 > Recommend installing the [Stylus](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) extension and using the configuration [Stylus-Obsidian-Topaz-Nord.json](https://github.com/XColorful/XColorful.github.io/blob/main/stylus/Stylus-Obsidian-Topaz-Nord.json)
+
+
+## Command
+
+[Command Introduction](https://github.com/XColorful/CBR-addon/wiki/Command-introduction#English)
+- [Progress bar command](https://github.com/XColorful/CBR-addon/wiki/Progress-bar-command#English)
 
 ## Datapack extension
 
@@ -91,3 +108,9 @@
 ### Client
 
 ### Server
+
+## About
+
+### Mod generated file
+
+- [Temporary data](https://github.com/XColorful/CBR-addon/wiki/Temp-data#English)
