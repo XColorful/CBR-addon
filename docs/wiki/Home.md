@@ -51,6 +51,12 @@
 
 ### 服务端配置
 
+## 关于模组
+
+### 模组生成文件
+
+- [临时数据](https://github.com/XColorful/CBR-addon/wiki/Temp-data)
+
 # English
 
 > Recommend installing the [Stylus](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) extension and using the configuration [Stylus-Obsidian-Topaz-Nord.json](https://github.com/XColorful/XColorful.github.io/blob/main/stylus/Stylus-Obsidian-Topaz-Nord.json)
@@ -102,3 +108,9 @@
 ### Client
 
 ### Server
+
+## About
+
+### Mod generated file
+
+- [Temporary data](https://github.com/XColorful/CBR-addon/wiki/Temp-data#English)
