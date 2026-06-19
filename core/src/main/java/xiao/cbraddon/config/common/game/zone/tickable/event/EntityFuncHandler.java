@@ -1,4 +1,4 @@
-package xiao.cbraddon.event.custom.game;
+package xiao.cbraddon.config.common.game.zone.tickable.event;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -20,7 +20,6 @@ import xiao.battleroyale.api.game.zone.gamezone.IGameZone;
 import xiao.battleroyale.common.game.zone.ZoneManager;
 import xiao.battleroyale.util.Vec3Utils;
 import xiao.cbraddon.CbrAddon;
-import xiao.cbraddon.config.common.game.zone.zonefunc.custom.EntityFuncProtocol;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
