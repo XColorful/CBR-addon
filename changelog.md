@@ -1,5 +1,8 @@
 ### 0.5.x
 
+#### 0.5.7
+- Add progress bar command
+
 #### 0.5.5
 - Replace lobby teleport sound from dimension to teleport
 - Add CBR 0.5.5 event tag
